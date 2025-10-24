@@ -1,12 +1,21 @@
 ﻿{
   "name": "bt-theme-danajalecos",
   "version": "1.0.0",
+  "type": "module",
+  "private": false,
   "description": "BT Theme customizations for DanaJalecos",
   "main": "dist/bt-overrides.danajalecos.v1.css",
+  "scripts": {
+    "build": "vite build",
+    "release:prep": "npm run build && git add dist && git commit -m \"build(theme-danajalecos): dist for release\" || echo nochange"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/crb8/bt-theme-danajalecos.git"
   },
   "author": "Christian Bona",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "vite": "^5.4.0"
+  }
 }
